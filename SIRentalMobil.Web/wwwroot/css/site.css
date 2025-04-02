@@ -1,0 +1,988 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/*-----------------------------------*\
+  #CSS GLOBAL
+\*-----------------------------------*/
+:root {
+    --primary-color: #8a79f0;
+    --primary-color-dark: #2e2a40;
+    --text-dark: #221e36;
+    --text-light: #767268;
+    --extra-light: #f1f2ff;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+  #CSS YANG DIGUNAKAN ULANG / REUSABLE
+\*-----------------------------------*/
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.section__description {
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        color: var(--white);
+        background-color: var(--primary-color-dark);
+    }
+
+.btn-hijau {
+    background-color: green !important;
+}
+
+    .btn-hijau:hover {
+        background-color: rgb(1, 40, 1) !important;
+    }
+
+.btn-merah {
+    background-color: red !important;
+}
+
+    .btn-merah:hover {
+        background-color: rgb(124, 1, 1) !important;
+    }
+
+.button_kanan {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+
+/* Breadcumbs */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+    .breadcrumbs a {
+        text-decoration: none;
+        color: #71747d;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s;
+    }
+
+        .breadcrumbs a:hover {
+            color: #515255;
+        }
+
+    .breadcrumbs .separator {
+        margin: 0 5px;
+        color: #6c757d;
+        font-size: 16px;
+    }
+
+    .breadcrumbs .current {
+        font-weight: bold;
+        color: #71747d;
+    }
+
+
+.judul_halaman h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .logo img {
+        max-width: 35px;
+    }
+
+    .logo span {
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--white);
+        white-space: nowrap;
+    }
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--text-dark);
+}
+
+h3{
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0rem;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+}
+
+input, select, textarea {
+    font-family: "Lexend", sans-serif !important;
+}
+
+.form-control {
+    cursor: pointer;
+}
+
+.btn-success {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-danger {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Input Style */
+.input_grup {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+    .input_grup .lihat-password {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #888;
+    }
+
+    .input_grup label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        padding: 0 5px;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .input_grup input {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+        .input_grup input:focus ~ label,
+        .input_grup input:valid ~ label {
+            top: 0;
+            font-size: 12px;
+            background: #fff;
+        }
+
+    .input_grup textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+/* Radio Button */
+input[type="radio"] {
+    width: 16px;
+    cursor: pointer;
+}
+
+.radio_grup {
+    display: flex;
+}
+
+    .radio_grup label {
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+
+/*-----------------------------------------------*\ #FILTER MOBIL \*-----------------------------------------------*/ 
+
+.header__form {
+    height: 8vh !important;
+}
+
+    .header__form form {
+        max-width: 1200px;
+        margin-inline: auto;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background-color: var(--white);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+    }
+
+    .header__form .input__group {
+        flex: 1 0 170px;
+        display: grid;
+        gap: 10px;
+    }
+
+    .header__form label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+
+    .header__form input {
+        font-family: 'Roboto';
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid var(--text-light);
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        color: var(--text-dark);
+        background-color: var(--light-gray);
+    }
+
+    .header__form select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: var(--light-gray);
+        border: 1px solid var(--text-light);
+        border-radius: 0.5rem;
+        padding: 10px;
+        font-size: 1rem;
+        color: #9b9b9b;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"%3E%3Cpath fill="gray" d="M4 6l4 4 4-4z"/%3E%3C/svg%3E');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 10px;
+        padding-right: 30px;
+        cursor: pointer;
+    }
+
+        .header__form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 5px var(--primary);
+        }
+
+
+
+    .header__form input:focus {
+        border-color: var(--primary);
+        box-shadow: 0px 0px 5px var(--primary);
+    }
+
+    .header__form select option {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+    }
+
+    .header__form .btn {
+        margin-top: 25px;
+        padding: 13px 17px;
+    }
+
+/* =============================== DIATAS 768px =============================== */
+@media (min-width: 768px) {
+    /*-----------------------------------*\
+    #FILTER MOBIL
+    \*-----------------------------------*/
+    .header__form form {
+        padding: 1.5rem;
+        transform: translateY(-50%);
+    }
+
+    .header__form .pencarian {
+        transform: translateY(-10%) !important;
+    }
+}
+
+
+/*-----------------------------------------------*\ CARD MOBIL \*-----------------------------------------------*/
+
+/*-----------------------------------*\
+  #MOBIL POPULER
+\*-----------------------------------*/
+.deals {
+    background-color: var(--extra-light);
+}
+
+.judul_deals {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.deals__container .section__description {
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+}
+
+.deals__tabs {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+    .deals__tabs .btn {
+        font-weight: 600;
+        color: var(--primary-color-dark);
+        background-color: var(--white);
+    }
+
+        .deals__tabs .btn.active {
+            color: var(--white);
+            background-color: var(--primary-color);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+.deals__container .tab__content {
+    display: none;
+    gap: 1rem;
+    animation: fadeEffect 1s;
+}
+
+    .deals__container .tab__content.active {
+        display: grid;
+    }
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.deals__card {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+    .deals__card img {
+        margin-bottom: 1rem;
+    }
+
+.deals__rating {
+    margin-bottom: 1rem;
+    color: goldenrod;
+}
+
+    .deals__rating span:last-child {
+        color: var(--text-light);
+    }
+
+.deals__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.deals__card__grid {
+    margin-bottom: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+    .deals__card__grid div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-light);
+    }
+
+        .deals__card__grid div span {
+            font-size: 1rem;
+        }
+
+.deals__card__footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+    .deals__card__footer h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+        .deals__card__footer h3 span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+    .deals__card__footer a {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+        .deals__card__footer a:hover {
+            color: var(--primary-color-dark);
+        }
+
+/* =============================== DIATAS 540px =============================== */
+@media (min-width: 540px) {
+    /*-----------------------------------*\
+    #MOBIL POPULER
+    \*-----------------------------------*/
+    .deals__container .tab__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =============================== DIATAS 768px =============================== */
+@media (min-width: 768px) {
+    /*-----------------------------------*\
+    #MOBIL POPULER
+    \*-----------------------------------*/
+    .deals__container .tab__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =============================== DIATAS 1024px =============================== */
+@media (min-width: 1024px) {
+    /*-----------------------------------*\
+    #MOBIL POPULER
+    \*-----------------------------------*/
+    .deals__container .tab__content {
+        gap: 1.5rem;
+    }
+
+    .deals__card {
+        padding: 1.5rem;
+    }
+}
+
+/*-----------------------------------------------*\ HALAMAN REUSABLE LAIN \*-----------------------------------------------*/
+
+/*=============================================================================================================================*\
+  #HALAMAN DETAIL MOBIL
+\*=============================================================================================================================*/
+
+
+.judul__detail__mobil__container {
+    padding: 0rem 1rem 1rem;
+}
+
+.detail_mobil_container {
+    display: flex;
+    padding: 0rem 1rem;
+    gap: 20px;
+}
+
+/*-----------------------------------*\
+  #SISI KIRI
+\*-----------------------------------*/
+.sisi_kiri_detail_mobil {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Utama Mobil */
+.utama_mobil {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+    gap : 20px;
+}
+
+.detail_mobil .spesifikasi_mobil {
+    display: flex;
+    gap: 15px;
+}
+
+.detail_mobil .tipe_mobil {
+    margin-bottom: 10px;
+}
+
+.spesifikasi_mobil .left,
+.spesifikasi_mobil .right {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.spesifikasi_mobil .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .spesifikasi_mobil .item .icon {
+        font-size: 15px;
+        color: #333;
+    }
+
+/* Deskripsi Tambahan Mobil */
+.sisi_kiri_detail_mobil .deskripsi_tambahan_mobil {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.deskripsi_tambahan_mobil .isi_deskripsi_tambahan_mobil {
+    margin-top: 10px;
+}
+
+/* Informasi Pemilik Mobil */
+.sisi_kiri_detail_mobil .informasi_pemilik_mobil {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.informasi_pemilik_mobil .group_informasi_pemilik {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+    .informasi_pemilik_mobil .group_informasi_pemilik p {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .informasi_pemilik_mobil .group_informasi_pemilik h5 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #222;
+    }
+
+/* Informasi Sopir Mobil */
+.sisi_kiri_detail_mobil .informasi_sopir_mobil {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.informasi_sopir_mobil .group_informasi_sopir {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+    .informasi_sopir_mobil .group_informasi_sopir p {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .informasi_sopir_mobil .group_informasi_sopir h5 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #222;
+    }
+
+/*-----------------------------------*\
+  #SISI KANAN
+\*-----------------------------------*/
+.sisi_kanan_detail_mobil {
+    padding: 10px;
+}
+
+/* Rincian Pesanan */
+.rincian_pesanan_detail_mobil {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .rincian_pesanan_detail_mobil .judul_rincian_pesanan {
+        margin-top: 10px;
+    }
+
+    .rincian_pesanan_detail_mobil .isi_rincian_pesanan .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+.isi_rincian_pesanan .item .icon {
+    font-size: 15px;
+    color: #333;
+}
+
+/* Rincian Harga */
+.rincian_harga_detail_mobil {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .rincian_harga_detail_mobil .judul_rincian_harga {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .rincian_harga_detail_mobil .isi_rincian_harga h5 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .rincian_harga_detail_mobil .isi_rincian_harga .fasilitas_sopir {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .rincian_harga_detail_mobil .isi_rincian_harga .fasilitas_sopir h6 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .rincian_harga_detail_mobil .isi_rincian_harga .fasilitas_sopir p {
+            font-size: 17px;
+        }
+
+.tombol_lanjutkan_pemesanan .btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*=============================================================================================================================*\
+  #HALAMAN PEMESANAN
+\*=============================================================================================================================*/
+
+.pemesanan_container {
+    display: flex;
+    padding: 0rem 0rem;
+    gap: 20px;
+}
+
+/* Sisi Kiri */
+
+/* Informasi Penyewa */
+.informasi_penyewa_pemesanan {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .informasi_penyewa_pemesanan .judul_informasi_penyewa_pemesanan {
+        margin-bottom: 20px;
+    }
+
+/* Fasilitas Sopir */
+.apakah_fasilitas_sopir {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .apakah_fasilitas_sopir .judul_apakah_fasilitas_sopir {
+        margin-bottom: 20px;
+    }
+
+/* Informasi Penjemputan */
+.informasi_penjemputan_pemesanan {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 20px 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .informasi_penjemputan_pemesanan label {
+        font-size: 14px;
+    }
+
+    .informasi_penjemputan_pemesanan .judul_informasi_penjemputan_pemesanan {
+        margin-bottom: 20px;
+    }
+
+/* Informasi Pengembalian */
+.informasi_pengembalian_pemesanan {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 20px 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .informasi_pengembalian_pemesanan label {
+        font-size: 14px;
+    }
+
+    .informasi_pengembalian_pemesanan .judul_informasi_pengembalian_pemesanan {
+        margin-bottom: 20px;
+    }
+
+
+/*=============================================================================================================================*\
+  #HALAMAN DAFTAR
+\*=============================================================================================================================*/
+
+.daftar_container {
+    max-width: 800px;
+    padding: 0rem 1rem 1rem !important;
+}
+
+
+/*=============================================================================================================================*\
+  #HALAMAN MASUK
+\*=============================================================================================================================*/
+
+.masuk_container {
+    max-width: 600px;
+    padding: 0rem 1rem 1rem !important;
+}
+
+/*=============================================================================================================================*\
+  #HALAMAN DASHBOARD PEMILIK
+\*=============================================================================================================================*/
+
+
+/* Statistik Container */
+.statistik__container {
+    padding: 0rem 1rem !important;
+}
+
+.judul_statistik {
+    margin-bottom: 20px;
+}
+
+.isi_statistik a{
+    display: inline-flex;
+}
+
+.tambah_container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .tambah_container i {
+        font-size: 24px;
+        color: #007bff;
+    }
+
+    .tambah_container:hover {
+        background-color: #e6f7ff;
+    }
+
+
+/* Daftar Mobil Container */
+
+.daftar_mobil_container {
+    padding: 1rem 1rem !important;
+}
+
+.judul_daftar_mobil {
+    margin-bottom: 20px;
+}
+
+.pemilik_mobil_content {
+    display: grid;
+}
+
+/* Pesanan Masuk Container */
+
+.pesanan__masuk__container {
+    padding: 0rem 1rem 1rem !important;
+}
+
+.judul_pesanan_masuk {
+    margin-bottom: 20px;
+}
+
+/* Pesanan Berjalan Container */
+
+.berjalan__container {
+    padding: 1rem 1rem !important;
+}
+
+.judul_berjalan {
+    margin-bottom: 20px;
+}
+
+/* Riwayat Container */
+
+.riwayat__container {
+    padding: 1rem 1rem !important;
+}
+
+.judul_riwayat {
+    margin-bottom: 20px;
+}
+
+
+/*=============================================================================================================================*\
+  #HALAMAN TAMBAH MOBIL
+\*=============================================================================================================================*/
+
+.tambah_mobil_container {
+    display: flex;
+    padding: 0rem 1rem !important;
+    gap: 20px;
+}
+
+
+/* Sisi Kiri */
+
+.informasi_tambah_mobil {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px 15px 10px;
+    margin-bottom: 10px;
+}
+
+    .informasi_tambah_mobil .judul_informasi_tambah_mobil {
+        margin-bottom: 20px;
+    }
+
+
+/* Sisi Kanan */
+
+.button_tambah_mobil a {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*=============================================================================================================================*\
+  #HALAMAN PEMBAYARAN
+\*=============================================================================================================================*/
+.pembayaran__container {
+    padding: 0rem 1rem !important;
+    display: flex;
+    gap: 20px;
+}
+
+.sisi_kiri_pembayaran .radio_grup {
+    display: block;
+}
+
+.radio_grup_individual {
+    margin-bottom: 8px;
+}
+
+
+
+/* =============================== DIATAS 540px =============================== */
+@media (min-width: 540px) {
+    
+    /*=============================================================================================================================*\
+    #HALAMAN DASHBOARD PEMILIK
+    \*=============================================================================================================================*/
+    .pemilik_mobil_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =============================== DIATAS 768px =============================== */
+@media (min-width: 768px) {
+
+    /*=============================================================================================================================*\
+    #HALAMAN DASHBOARD PEMILIK
+    \*=============================================================================================================================*/
+    .pemilik_mobil_content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =============================== DIATAS 1024px =============================== */
+@media (min-width: 1024px) {
+    /*=============================================================================================================================*\
+    #HALAMAN DASHBOARD PEMILIK
+    \*=============================================================================================================================*/
+    .pemilik_mobil_content {
+        gap: 1.5rem;
+    }
+}
