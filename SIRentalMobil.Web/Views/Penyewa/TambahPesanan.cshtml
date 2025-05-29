@@ -56,6 +56,7 @@
                 <div class="judul_informasi_penyewa_pemesanan">
                     <h3>Informasi Pesanan</h3>
                 </div>
+
                 <label asp-for="@Model.Sopir">Fasilitas Sopir</label>
                 <div class="radio_grup mb-3">
                     <input type="radio" asp-for="@Model.Sopir" value="@false">
@@ -66,22 +67,13 @@
                         <label class="ps-1" asp-for="@Model.Sopir">Menggunakan Sopir</label>
                     }
                 </div>
-                <label asp-for="@Model.LuarKota">Jangkauan Penggunaan</label>
-                <div class="radio_grup mb-3">
-                    <input type="radio" asp-for="@Model.LuarKota" value="@false">
-                    <label class="ps-1 pe-2" asp-for="@Model.LuarKota">Dalam Kota</label><br>
 
-                    @if (mobil.LuarKota)
-                    {
-                        <input class="ps-1" type="radio" asp-for="@Model.LuarKota" value="@true">
-                        <label class="ps-1" asp-for="@Model.LuarKota">Luar Kota</label>
-                    }
-                </div>
                 <label asp-for="@Model.TanggalMulai"></label>
                 <div class="input_grup mb-3">
                     <input asp-for="@Model.TanggalMulai" id="start-date" value="@Model.TanggalMulai.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture)" type="text" />
                 </div>
                 <span asp-validation-for="@Model.TanggalMulai" class="form-text text-danger"></span>
+
                 <label asp-for="@Model.TanggalAkhir"></label>
                 <div class="input_grup mb-3">
                     <input asp-for="@Model.TanggalAkhir" id="end-date" value="@Model.TanggalAkhir.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture)" type="text" />
@@ -89,7 +81,6 @@
                 <span asp-validation-for="@Model.TanggalAkhir" class="form-text text-danger"></span>
 
                 <input asp-for="@Model.MobilId" readonly hidden />
-
             </div>
             <div class="tombol_lanjutkan_pemesanan">
                 <button type="submit" class="btn w-100">Pesan Mobil</button>

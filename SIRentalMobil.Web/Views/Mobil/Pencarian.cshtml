@@ -16,13 +16,6 @@
             </select>
         </div>
         <div class="input__group">
-            <label>Area Perjalanan</label>
-            <select asp-for="@Model.LuarKota id=" luarKota">
-                <option value="@false">Dalam Kota</option>
-                <option value="@true">Luar Kota</option>
-            </select>
-        </div>
-        <div class="input__group">
             <label>Tanggal Mulai</label>
             <input type="text" asp-for="@Model.TanggalMulai" id="start-date" value="@Model.TanggalMulai.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" placeholder="Pilih tanggal mulai" required />
             <span asp-validation-for="@Model.TanggalMulai"></span>
@@ -76,15 +69,12 @@
                             <div>
                                 <span><i class="ri-gas-station-line"></i></span> @(mobil.Sopir ? "Ada Sopir" : "Tidak Ada Sopir")
                             </div>
-                            <div>
-                                <span><i class="ri-gas-station-line"></i></span> @(mobil.LuarKota ? "Luar Kota" : "Dalam Kota")
-                            </div>
                         </div>
                         <hr />
                         <div class="deals__card__footer">
                             <h3>@((mobil.Tarif * Model.JumlahHariSewa).ToString("C2", Localization.CultureInfo))<span>/ @Model.JumlahHariSewa Hari</span></h3>
-                            <a asp-area="" asp-controller="Mobil" asp-action="Detail" asp-route-id="@mobil.Id" asp-route-luarKota="@Model.LuarKota"
-                               asp-route-sopir="@Model.Sopir" asp-route-tanggalMulai="@Model.TanggalMulai.ToString(CultureInfo.InvariantCulture)" asp-route-tanggalAkhir="@Model.TanggalAkhir.ToString(CultureInfo.InvariantCulture)">
+                            <a asp-area="" asp-controller="Mobil" asp-action="Detail" asp-route-id="@mobil.Id"　asp-route-sopir="@Model.Sopir"
+                                asp-route-tanggalMulai="@Model.TanggalMulai.ToString(CultureInfo.InvariantCulture)" asp-route-tanggalAkhir="@Model.TanggalAkhir.ToString(CultureInfo.InvariantCulture)">
                                 Lihat Detail
                                 <span><i class="ri-arrow-right-line"></i></span>
                             </a>

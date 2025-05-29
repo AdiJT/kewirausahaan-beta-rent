@@ -27,13 +27,6 @@
             </select>
         </div>
         <div class="input__group">
-            <label>Area Perjalanan</label>
-            <select name="luarKota" id="luarKota">
-                <option value="@false">Dalam Kota</option>
-                <option value="@true">Luar Kota</option>
-            </select>
-        </div>
-        <div class="input__group">
             <label>Tanggal Mulai</label>
             <input type="text" name="tanggalMulai" value="@DateOnly.FromDateTime(DateTime.Now).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" id="start-date" placeholder="Pilih tanggal mulai" required />
         </div>

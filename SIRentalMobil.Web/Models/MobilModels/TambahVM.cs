@@ -53,10 +53,6 @@ public class TambahVM
     [Required(ErrorMessage = "{0} harus diisi")]
     public int MaksHariSewa { get; set; }
 
-    [Display(Name = "Luar Kota")]
-    [Required(ErrorMessage = "{0} harus diisi")]
-    public bool LuarKota { get; set; }
-
     [Display(Name = "Fasilitas Sopir")]
     [Required(ErrorMessage = "{0} harus diisi")]
     public bool Sopir { get; set; }

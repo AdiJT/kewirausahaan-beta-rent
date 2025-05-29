@@ -97,16 +97,6 @@
                     <h3>Informasi Pemesanan</h3>
                 </div>
 
-                <label>Area Pemakaian</label>
-                <div class="radio_grup mb-4 mt-1">
-                    <input type="radio" asp-for="@Model.LuarKota" value="@false" checked>
-                    <label class="ps-2 pe-3" asp-for="@Model.LuarKota">Dalam Kota</label><br>
-
-                    <input asp-for="@Model.LuarKota" type="radio" value="@true">
-                    <label class="ps-2" asp-for="@Model.LuarKota">Luar Kota</label>
-                </div>
-                <span asp-validation-for="@Model.LuarKota"></span>
-
                 <div class="input_grup">
                     <input asp-for="@Model.MaksHariSewa" />
                     <label asp-for="@Model.MaksHariSewa"></label>
@@ -127,7 +117,7 @@
                     <input asp-for="@Model.Sopir" type="radio" value="@true">
                     <label class="ps-2" asp-for="@Model.Sopir">Dengan Sopir</label>
                 </div>
-                <span asp-validation-for="@Model.LuarKota"></span>
+                <span asp-validation-for="@Model.Sopir"></span>
             </div>
 
             <div class="button_tambah_mobil">

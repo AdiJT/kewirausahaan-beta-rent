@@ -15,10 +15,9 @@ public class Mobil : Entity
     public Uri UrlGambar { get; set; }
     public double Tarif { get; set; }
     public int MaksPenumpang { get; set; }
-    public string Dekripsi { get; set; }
+    public string Dekripsi { get; set; } = string.Empty;
     public StatusMobil Status { get; set; }
     public int MaksHariSewa { get; set; }
-    public bool LuarKota { get; set; }
     public bool Sopir { get; set; }
 
     public User Pemilik { get; set; }

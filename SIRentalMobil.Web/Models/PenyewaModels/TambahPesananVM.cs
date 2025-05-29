@@ -12,10 +12,6 @@ public class TambahPesananVM
     [Required(ErrorMessage = "{0} harus diisi")]
     public required bool Sopir { get; set; }
 
-    [Display(Name = "Jangkauan Penggunaan")]
-    [Required(ErrorMessage = "{0} harus diisi")]
-    public required bool LuarKota { get; set; }
-
     [Display(Name = "Tanggal Mulai Sewa")]
     [Required(ErrorMessage = "{0} harus diisi")]
     public required DateOnly TanggalMulai { get; set; }

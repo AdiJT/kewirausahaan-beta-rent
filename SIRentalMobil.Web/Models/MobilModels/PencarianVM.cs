@@ -6,7 +6,6 @@ namespace SIRentalMobil.Web.Models.MobilModels;
 public class PencarianVM
 {
     public required List<Mobil> DaftarMobil { get; set; }
-    public required bool LuarKota { get; set; }
     public required bool Sopir { get; set; }
 
     [Required(ErrorMessage = "Harus diiisi")]
