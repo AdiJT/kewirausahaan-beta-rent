@@ -19,6 +19,8 @@ nav {
 
 .nav__logo .logo-dark {
     display: none;
+    width : 250px;
+    height : auto;
 }
 
 .nav__menu__btn {
