@@ -70,13 +70,13 @@
 
                 <label asp-for="@Model.TanggalMulai"></label>
                 <div class="input_grup mb-3">
-                    <input asp-for="@Model.TanggalMulai" id="start-date" value="@Model.TanggalMulai.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture)" type="text" />
+                    <input asp-for="@Model.TanggalMulai" id="start-date" value="@Model.TanggalMulai.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" type="text" />
                 </div>
                 <span asp-validation-for="@Model.TanggalMulai" class="form-text text-danger"></span>
 
                 <label asp-for="@Model.TanggalAkhir"></label>
                 <div class="input_grup mb-3">
-                    <input asp-for="@Model.TanggalAkhir" id="end-date" value="@Model.TanggalAkhir.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture)" type="text" />
+                    <input asp-for="@Model.TanggalAkhir" id="end-date" value="@Model.TanggalAkhir.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" type="text" />
                 </div>
                 <span asp-validation-for="@Model.TanggalAkhir" class="form-text text-danger"></span>
 

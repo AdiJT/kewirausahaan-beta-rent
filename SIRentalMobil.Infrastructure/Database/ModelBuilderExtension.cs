@@ -441,10 +441,10 @@ public static class ModelBuilderExtension
             {
                 Id = 1,
                 Sopir = true,
-                TanggalPesan = new DateTime(2024, 12, 03, 12, 00, 00),
+                TanggalPesan = new DateTime(2024, 5, 29, 12, 00, 00),
                 Status = StatusPesanan.BelumDiterima,
-                TanggalAwalSewa = new DateTime(2024, 12, 03, 12, 00, 00),
-                TanggalAkhirSewa = new DateTime(2024, 12, 04, 12, 00, 00),
+                TanggalAwalSewa = new DateTime(2024, 5, 29, 12, 00, 00),
+                TanggalAkhirSewa = new DateTime(2024, 6, 2, 12, 00, 00),
                 PenyewaId = 1,
                 MobilId = 3
             },
@@ -452,10 +452,10 @@ public static class ModelBuilderExtension
             {
                 Id = 2,
                 Sopir = false,
-                TanggalPesan = new DateTime(2024, 11, 30, 12, 00, 00),
+                TanggalPesan = new DateTime(2024, 5, 25, 12, 00, 00),
                 Status = StatusPesanan.SudahBayar,
-                TanggalAwalSewa = new DateTime(2024, 12, 1, 12, 00, 00),
-                TanggalAkhirSewa = new DateTime(2024, 12, 3, 12, 00, 00),
+                TanggalAwalSewa = new DateTime(2024, 5, 26, 12, 00, 00),
+                TanggalAkhirSewa = new DateTime(2024, 5, 28, 12, 00, 00),
                 PenyewaId = 7,
                 MobilId = 2
             },
@@ -463,10 +463,10 @@ public static class ModelBuilderExtension
             {
                 Id = 3,
                 Sopir = false,
-                TanggalPesan = new DateTime(2024, 11, 28, 12, 00, 00),
+                TanggalPesan = new DateTime(2024, 5, 24, 12, 00, 00),
                 Status = StatusPesanan.SudahBayar,
-                TanggalAwalSewa = new DateTime(2024, 11, 29, 12, 00, 00),
-                TanggalAkhirSewa = new DateTime(2024, 11, 30, 12, 00, 00),
+                TanggalAwalSewa = new DateTime(2024, 5, 27, 12, 00, 00),
+                TanggalAkhirSewa = new DateTime(2024, 5, 30, 12, 00, 00),
                 PenyewaId = 8,
                 MobilId = 1
             }
