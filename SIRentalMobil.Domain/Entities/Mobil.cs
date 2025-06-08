@@ -18,7 +18,6 @@ public class Mobil : Entity
     public string Dekripsi { get; set; } = string.Empty;
     public StatusMobil Status { get; set; }
     public int MaksHariSewa { get; set; }
-    public bool Sopir { get; set; }
 
     public User Pemilik { get; set; }
     public List<Pesanan> DaftarPesanan { get; set; } = [];

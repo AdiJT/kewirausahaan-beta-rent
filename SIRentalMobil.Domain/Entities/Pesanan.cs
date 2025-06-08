@@ -5,20 +5,17 @@ namespace SIRentalMobil.Domain.Entities;
 
 public class Pesanan : Entity
 {
-    public const double TarifSopir = 100_000d;
-    public const double TarifAplikasi = 50_000d;
+    public double TarifAplikasi = 0.1;
 
     public DateTime TanggalPesan { get; set; }
     public DateTime TanggalAwalSewa { get; set; }
     public DateTime TanggalAkhirSewa { get; set; }
-    public bool Sopir { get; set; }
     public StatusPesanan Status { get; set; }
 
     public int JumlahHariSewa => (int)Math.Ceiling(TanggalAkhirSewa.Subtract(TanggalAwalSewa).TotalDays) + 1;
-    public double TotalHarga => 
-        (Mobil.Tarif * JumlahHariSewa) + 
-        (Sopir ? TarifSopir : 0) + 
-        TarifAplikasi;
+    private double _totalHargaTanpaTarif => Mobil.Tarif * JumlahHariSewa;
+    public double TotalHarga => _totalHargaTanpaTarif + TarifAplikasi * _totalHargaTanpaTarif;
+
 
     public User Penyewa { get; set; }
     public Mobil Mobil { get; set; }

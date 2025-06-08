@@ -153,7 +153,6 @@ public static class ModelBuilderExtension
                 Tarif = 450000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 7,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 2
@@ -172,7 +171,6 @@ public static class ModelBuilderExtension
                 Tarif = 400000d,
                 MaksPenumpang = 5,
                 MaksHariSewa = 5,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.TidakTersedia,
                 PemilikId = 2
@@ -191,7 +189,6 @@ public static class ModelBuilderExtension
                 Tarif = 500000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 10,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.TidakTersedia,
                 PemilikId = 2
@@ -212,7 +209,6 @@ public static class ModelBuilderExtension
                 Tarif = 300000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 5,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 3
@@ -231,7 +227,6 @@ public static class ModelBuilderExtension
                 Tarif = 600000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 7,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 3
@@ -250,7 +245,6 @@ public static class ModelBuilderExtension
                 Tarif = 350000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 6,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 3
@@ -271,7 +265,6 @@ public static class ModelBuilderExtension
                 Tarif = 700000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 10,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 4
@@ -290,7 +283,6 @@ public static class ModelBuilderExtension
                 Tarif = 1000000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 12,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 4
@@ -309,7 +301,6 @@ public static class ModelBuilderExtension
                 Tarif = 900000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 9,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 4
@@ -330,7 +321,6 @@ public static class ModelBuilderExtension
                 Tarif = 250000d,
                 MaksPenumpang = 5,
                 MaksHariSewa = 4,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 5
@@ -349,7 +339,6 @@ public static class ModelBuilderExtension
                 Tarif = 270000d,
                 MaksPenumpang = 5,
                 MaksHariSewa = 5,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 5
@@ -368,7 +357,6 @@ public static class ModelBuilderExtension
                 Tarif = 350000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 6,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 5
@@ -389,7 +377,6 @@ public static class ModelBuilderExtension
                 Tarif = 1200000d,
                 MaksPenumpang = 15,
                 MaksHariSewa = 15,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 6
@@ -408,7 +395,6 @@ public static class ModelBuilderExtension
                 Tarif = 1300000d,
                 MaksPenumpang = 16,
                 MaksHariSewa = 14,
-                Sopir = true,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 6
@@ -427,7 +413,6 @@ public static class ModelBuilderExtension
                 Tarif = 500000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 7,
-                Sopir = false,
                 UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 6
@@ -440,7 +425,6 @@ public static class ModelBuilderExtension
             new
             {
                 Id = 1,
-                Sopir = true,
                 TanggalPesan = new DateTime(2024, 5, 29, 12, 00, 00),
                 Status = StatusPesanan.BelumDiterima,
                 TanggalAwalSewa = new DateTime(2024, 5, 29, 12, 00, 00),
@@ -451,7 +435,6 @@ public static class ModelBuilderExtension
             new
             {
                 Id = 2,
-                Sopir = false,
                 TanggalPesan = new DateTime(2024, 5, 25, 12, 00, 00),
                 Status = StatusPesanan.SudahBayar,
                 TanggalAwalSewa = new DateTime(2024, 5, 26, 12, 00, 00),
@@ -462,7 +445,6 @@ public static class ModelBuilderExtension
             new
             {
                 Id = 3,
-                Sopir = false,
                 TanggalPesan = new DateTime(2024, 5, 24, 12, 00, 00),
                 Status = StatusPesanan.SudahBayar,
                 TanggalAwalSewa = new DateTime(2024, 5, 27, 12, 00, 00),
