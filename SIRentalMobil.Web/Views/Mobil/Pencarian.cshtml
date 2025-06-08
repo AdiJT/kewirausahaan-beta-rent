@@ -9,13 +9,6 @@
 <section class="header__form pencarian">
     <form class="pencarian" asp-action="@nameof(MobilController.Pencarian)" method="get">
         <div class="input__group">
-            <label>Fasilitas Sopir</label>
-            <select asp-for="@Model.Sopir" id="sopir">
-                <option value="@true">Dengan Sopir</option>
-                <option value="@false">Tanpa Sopir</option>
-            </select>
-        </div>
-        <div class="input__group">
             <label>Tanggal Mulai</label>
             <input type="text" asp-for="@Model.TanggalMulai" id="start-date" value="@Model.TanggalMulai.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" placeholder="Pilih tanggal mulai" required />
             <span asp-validation-for="@Model.TanggalMulai"></span>
@@ -66,14 +59,11 @@
                             <div>
                                 <span><i class="ri-gas-station-line"></i></span> @mobil.JenisBensin.Humanize()
                             </div>
-                            <div>
-                                <span><i class="ri-gas-station-line"></i></span> @(mobil.Sopir ? "Ada Sopir" : "Tidak Ada Sopir")
-                            </div>
                         </div>
                         <hr />
                         <div class="deals__card__footer">
                             <h3>@((mobil.Tarif * Model.JumlahHariSewa).ToString("C2", Localization.CultureInfo))<span>/ @Model.JumlahHariSewa Hari</span></h3>
-                            <a asp-area="" asp-controller="Mobil" asp-action="Detail" asp-route-id="@mobil.Id" asp-route-sopir="@Model.Sopir"
+                            <a asp-area="" asp-controller="Mobil" asp-action="Detail" asp-route-id="@mobil.Id"
                                asp-route-tanggalMulai="@Model.TanggalMulai.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" asp-route-tanggalAkhir="@Model.TanggalAkhir.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)">
                                 Lihat Detail
                                 <span><i class="ri-arrow-right-line"></i></span>

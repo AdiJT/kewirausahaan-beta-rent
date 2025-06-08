@@ -30,7 +30,6 @@ public class MobilController : Controller
     }
 
     public async Task<IActionResult> Pencarian(
-        bool sopir = false,
         DateOnly? tanggalMulai = null,
         DateOnly? tanggalAkhir = null)
     {
@@ -39,9 +38,6 @@ public class MobilController : Controller
             .Include(m => m.DaftarPesanan)
             .Where(m => m.Status == StatusMobil.Tersedia)
             .ToListAsync();
-
-        if (sopir)
-            daftarMobil = daftarMobil.Where(m => m.Sopir).ToList();
 
         tanggalMulai ??= DateOnly.FromDateTime(DateTime.Now);
         tanggalAkhir ??= DateOnly.FromDateTime(DateTime.Now);
@@ -52,7 +48,6 @@ public class MobilController : Controller
         return View(new PencarianVM
         {
             DaftarMobil = daftarMobil,
-            Sopir = sopir,
             TanggalMulai = tanggalMulai.Value,
             TanggalAkhir = tanggalAkhir.Value,
             JumlahHariSewa = jumlahHari
@@ -61,7 +56,6 @@ public class MobilController : Controller
 
     public async Task<IActionResult> Detail(
         int id,
-        bool sopir = false,
         DateOnly? tanggalMulai = null,
         DateOnly? tanggalAkhir = null)
     {
@@ -79,7 +73,6 @@ public class MobilController : Controller
         return View(new DetailVM
         {
             Mobil = mobil,
-            Sopir = sopir,
             TanggalMulai = tanggalMulai.Value,
             TanggalAkhir = tanggalAkhir.Value,
             JumlahHariSewa = jumlahHari
@@ -119,7 +112,6 @@ public class MobilController : Controller
             MaksHariSewa = vm.MaksHariSewa,
             MaksPenumpang = vm.MaksPenumpang,
             NomorPlat = vm.NomorPlat,
-            Sopir = vm.Sopir,
             Tahun = vm.Tahun,
             Tarif = vm.Tarif,
             UrlGambar = urlGambar.Value,

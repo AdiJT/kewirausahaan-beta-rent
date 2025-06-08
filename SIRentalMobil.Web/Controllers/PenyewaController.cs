@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using SIRentalMobil.Domain.Entities;
 using SIRentalMobil.Domain.Enums;
 using SIRentalMobil.Infrastructure.Database;
@@ -37,7 +36,7 @@ public class PenyewaController : Controller
         return View(user);
     }
 
-    public async Task<IActionResult> TambahPesanan(int id, bool sopir, DateOnly tanggalMulai, DateOnly tanggalAkhir)
+    public async Task<IActionResult> TambahPesanan(int id, DateOnly tanggalMulai, DateOnly tanggalAkhir)
     {
         var user = await _signInManager.GetUser();
         if (user is null || user.Role != UserRoles.Penyewa) return Unauthorized();
@@ -57,8 +56,7 @@ public class PenyewaController : Controller
         {
             MobilId = id,
             TanggalAkhir = tanggalAkhir,
-            TanggalMulai = tanggalMulai,
-            Sopir = sopir
+            TanggalMulai = tanggalMulai
         });
     }
 
@@ -77,7 +75,6 @@ public class PenyewaController : Controller
 
         var pesanan = new Pesanan
         {
-            Sopir = vm.Sopir,
             TanggalPesan = DateTime.Now,
             TanggalAwalSewa = vm.TanggalMulai.ToDateTime(time),
             TanggalAkhirSewa = vm.TanggalAkhir.ToDateTime(time),

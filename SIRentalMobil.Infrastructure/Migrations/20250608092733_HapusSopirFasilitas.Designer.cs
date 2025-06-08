@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SIRentalMobil.Infrastructure.Database;
@@ -11,9 +12,11 @@ using SIRentalMobil.Infrastructure.Database;
 namespace SIRentalMobil.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250608092733_HapusSopirFasilitas")]
+    partial class HapusSopirFasilitas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,7 +135,7 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         {
                             Id = 1,
                             CC = 1500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Toyota",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -143,14 +146,14 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 2,
                             Status = 0,
                             Tahun = 2020,
-                            Tarif = 350000.0,
+                            Tarif = 450000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 2,
                             CC = 1300,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Honda",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -161,14 +164,14 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 2,
                             Status = 1,
                             Tahun = 2021,
-                            Tarif = 300000.0,
+                            Tarif = 400000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 3,
                             CC = 1500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Mitsubishi",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
@@ -179,14 +182,14 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 2,
                             Status = 1,
                             Tahun = 2019,
-                            Tarif = 400000.0,
+                            Tarif = 500000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 4,
                             CC = 1200,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Daihatsu",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -197,14 +200,14 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 3,
                             Status = 0,
                             Tahun = 2022,
-                            Tarif = 400000.0,
+                            Tarif = 300000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 5,
                             CC = 1500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Toyota",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
@@ -215,14 +218,14 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 3,
                             Status = 0,
                             Tahun = 2021,
-                            Tarif = 300000.0,
+                            Tarif = 600000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 6,
                             CC = 1400,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Suzuki",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -239,26 +242,26 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         new
                         {
                             Id = 7,
-                            CC = 1999,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
-                            Jenis = "Brio",
+                            CC = 2000,
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Jenis = "Kijang",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
                             MaksHariSewa = 10,
                             MaksPenumpang = 7,
-                            Nama = "Honda Brio",
+                            Nama = "Kijang Innova",
                             NomorPlat = "DH1234",
                             PemilikId = 4,
                             Status = 0,
-                            Tahun = 2024,
-                            Tarif = 30000.0,
-                            UrlGambar = "/assets/Brio.png"
+                            Tahun = 2021,
+                            Tarif = 700000.0,
+                            UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 8,
                             CC = 2500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Toyota",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
@@ -276,7 +279,7 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         {
                             Id = 9,
                             CC = 2400,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Honda",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -294,7 +297,7 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         {
                             Id = 10,
                             CC = 1200,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Daihatsu",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -305,32 +308,32 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             PemilikId = 5,
                             Status = 0,
                             Tahun = 2022,
-                            Tarif = 300000.0,
+                            Tarif = 250000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 11,
-                            CC = 1493,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
-                            Jenis = "Suzuki",
+                            CC = 1200,
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Jenis = "Toyota",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
                             MaksHariSewa = 5,
                             MaksPenumpang = 5,
-                            Nama = "Suzuki Mega Carry ",
+                            Nama = "Toyota Agya",
                             NomorPlat = "DH1234",
                             PemilikId = 5,
                             Status = 0,
                             Tahun = 2021,
-                            Tarif = 250000.0,
+                            Tarif = 270000.0,
                             UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 12,
                             CC = 1500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Honda",
                             JenisBensin = 0,
                             JenisTransmisi = 0,
@@ -342,13 +345,13 @@ namespace SIRentalMobil.Infrastructure.Migrations
                             Status = 0,
                             Tahun = 2020,
                             Tarif = 350000.0,
-                            UrlGambar = "/assets/pickup.png"
+                            UrlGambar = "/assets/deals-1.png"
                         },
                         new
                         {
                             Id = 13,
                             CC = 2800,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Toyota",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
@@ -366,7 +369,7 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         {
                             Id = 14,
                             CC = 3000,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Isuzu",
                             JenisBensin = 1,
                             JenisTransmisi = 0,
@@ -384,7 +387,7 @@ namespace SIRentalMobil.Infrastructure.Migrations
                         {
                             Id = 15,
                             CC = 1500,
-                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
+                            Dekripsi = "Mobil bersih, wangi, fit untuk segala medan dan di pandu dengan driver/supir yg ramah, paham jalan dan mampu mengoperasikan gps/googlemaps/waze dengan baik sehingga mampu menemukan jalan atau alamat dengan lebih cepat dan akurat. ",
                             Jenis = "Suzuki",
                             JenisBensin = 0,
                             JenisTransmisi = 0,

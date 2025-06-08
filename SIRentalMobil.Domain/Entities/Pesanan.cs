@@ -5,7 +5,7 @@ namespace SIRentalMobil.Domain.Entities;
 
 public class Pesanan : Entity
 {
-    public double TarifAplikasi = 0.1;
+    public static double TarifAplikasi => 0.1;
 
     public DateTime TanggalPesan { get; set; }
     public DateTime TanggalAwalSewa { get; set; }

@@ -108,16 +108,6 @@
                     <label asp-for="@Model.Tarif"></label>
                 </div>
                 <span asp-validation-for="@Model.Tarif"></span>
-
-                <label>Fasilitas Sopir</label>
-                <div class="radio_grup mb-2 mt-1">
-                    <input type="radio" asp-for="@Model.Sopir" value="@false" checked>
-                    <label class="ps-2 pe-3" asp-for="@Model.Sopir">Tanpa Sopir</label><br>
-
-                    <input asp-for="@Model.Sopir" type="radio" value="@true">
-                    <label class="ps-2" asp-for="@Model.Sopir">Dengan Sopir</label>
-                </div>
-                <span asp-validation-for="@Model.Sopir"></span>
             </div>
 
             <div class="button_tambah_mobil">

@@ -20,13 +20,6 @@
 <section class="header__form">
     <form class="pencarian" asp-action="@nameof(MobilController.Pencarian)" asp-area="" asp-controller="Mobil" method="get">
         <div class="input__group">
-            <label>Fasilitas Sopir</label>
-            <select name="sopir" id="sopir">
-                <option value="@true">Dengan Sopir</option>
-                <option value="@false">Tanpa Sopir</option>
-            </select>
-        </div>
-        <div class="input__group">
             <label>Tanggal Mulai</label>
             <input type="text" name="tanggalMulai" value="@DateOnly.FromDateTime(DateTime.Now).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" id="start-date" placeholder="Pilih tanggal mulai" required />
         </div>
