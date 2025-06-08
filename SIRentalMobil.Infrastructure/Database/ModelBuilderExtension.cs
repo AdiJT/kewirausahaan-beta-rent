@@ -328,7 +328,7 @@ public static class ModelBuilderExtension
             new
             {
                 Id = 11,
-                Nama = "Suzuki Mega Carry ",
+                Nama = "Suzuki Mega Carry pick up ",
                 Jenis = "Suzuki",
                 CC = 1493,
                 Tahun = 2021,
@@ -339,7 +339,7 @@ public static class ModelBuilderExtension
                 Tarif = 250000d,
                 MaksPenumpang = 5,
                 MaksHariSewa = 5,
-                UrlGambar = new Uri("/assets/deals-1.png", UriKind.Relative),
+                UrlGambar = new Uri("/assets/pickup.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 5
             },
@@ -357,7 +357,7 @@ public static class ModelBuilderExtension
                 Tarif = 350000d,
                 MaksPenumpang = 7,
                 MaksHariSewa = 6,
-                UrlGambar = new Uri("/assets/pickup.png", UriKind.Relative),
+                UrlGambar = new Uri("/assets/Mobilo.png", UriKind.Relative),
                 Status = StatusMobil.Tersedia,
                 PemilikId = 5
             },
